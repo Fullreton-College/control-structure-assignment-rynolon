@@ -3,14 +3,42 @@
 using namespace std;
 int main()
 {
-    double mph = 6.5;
-    // PACE calculation
-    /* write your code */
+  int quantity;
+  int price;
+  double finalprice;
+  price = 199;
 
-    //express pace in minutes and seconds
-  /* write your code here */
+  cout<<"How many packages would you like to purchase? Each package is $199 and we offer discounts for bulk purchases!"<<endl;
+  cin>> quantity;
 
-  //express your output in 1 decimal points
+  while (quantity <= 0)
+  {
+    cout<<"Please enter a value greater than 0."<<endl;
+  }
+  
 
+  if (quantity < 10)
+  {
+    finalprice = (quantity*price);    
+  }
+  else if (quantity >=10 && quantity <= 19)
+  {
+    finalprice = (quantity*price)*.8;
+  }
+  else if (quantity >=20 && quantity <= 49)
+  {
+    finalprice = (quantity*price)*.7;
+  }
+  else if (quantity >= 50 && quantity <= 99)
+  {
+    finalprice = (quantity*price)*.6;
+  }
+  else
+  {
+    finalprice = (quantity*price)*.5;
+  }
 
+  cout<<"Your total is $" << finalprice <<"."<<endl; 
+
+  return 0;
 }
